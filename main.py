@@ -21,7 +21,7 @@
 
 # (5 points): As a developer, I want all of my functions to have a Single Responsibility. Remember, each function should do just one thing!
 
-
+import random
 
 # LISTS of FEATURES
 
@@ -30,4 +30,13 @@ restaurants = ['Pizza Hut', 'Margaritaville', 'Orange Dragon', 'Empanada Mama', 
 entertainments = ['The Fair', 'Concert', 'Puppet Show', 'The Zoo', 'Silent Disco']
 transportations = ['Train', 'Plane', 'Car', 'Bus', 'Heelys']
 
+destination = random.choice(destinations)
+restaurant = random.choice(restaurants)
+entertainment = random.choice(entertainments)
+transportation = random.choice(transportations)
+
+day_trip = (f'Destination: {destination}, Restaurant: {restaurant}, Entertainment: {entertainment}, Transportation: {transportation}')
+
+print (day_trip)
+confirm_choice = input('Please enter y/n to confirm these travel options.')
 
