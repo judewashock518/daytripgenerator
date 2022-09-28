@@ -27,26 +27,7 @@
 
 destinations = ['New York City', 'Los Angeles', 'Houston', 'Schenectady', 'Atlanta']
 restaurants = ['Pizza Hut', 'Margaritaville', 'Orange Dragon', 'Empanada Mama', 'Red Lobster']
-entertainment = ['The Fair', 'Concert', 'Puppet Show', 'The Zoo', 'Silent Disco']
-transportation = ['Train', 'Plane', 'Car', 'Bus', 'Heelys']
-
-
-> def run_day_trip_generator():
-
-
-> def print_full_trip(list_of_options):
-
-
-> def generate_random_item(list_of_items):
-
-
-> def determine_satisfaction(current trip, trip options):
-
-
-> def re_select_option(current_trip, options):
-
-
-> run_day_trip_generator()
-
+entertainments = ['The Fair', 'Concert', 'Puppet Show', 'The Zoo', 'Silent Disco']
+transportations = ['Train', 'Plane', 'Car', 'Bus', 'Heelys']
 
 
