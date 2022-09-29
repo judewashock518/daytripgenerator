@@ -38,5 +38,17 @@ transportation = random.choice(transportations)
 day_trip = (f'Destination: {destination}, Restaurant: {restaurant}, Entertainment: {entertainment}, Transportation: {transportation}')
 
 print (day_trip)
-confirm_choice = input('Please enter y/n to confirm these travel options.')
+confirm_choice = input(f'Does that sound like fun? Please enter YES or NO to confirm these travel options.')
+
+
+if confirm_choice != 'YES':
+    destination = random.choice(destinations)
+    restaurant = random.choice(restaurants)
+    entertainment = random.choice(entertainments)
+    transportation = random.choice(transportations)
+    day_trip = (f'Destination: {destination}, Restaurant: {restaurant}, Entertainment: {entertainment}, Transportation: {transportation}')
+    confirm_choice = input(f' We have selected {destination}, {restaurant}, {entertainment}, and {transportation} as other options. Does that work for you? ')
+
+print(confirm_choice + f'!  You selected {day_trip} as your trip options. Have a great time!')
+
 
