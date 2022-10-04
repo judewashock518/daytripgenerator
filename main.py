@@ -105,9 +105,12 @@ def new_trans(confirm_choice):
 # print(f'Your day trip is: {destination}, {restaurant}, {entertainment}, all en route by {transportation}! Have fun!')
 
 
-destination = new_dest(destinations)
-restaurant = new_rest(restaurants)
-entertainment = new_ent(entertainments)
-transportation = new_trans(transportations)
+new_destination = new_dest(confirm_choice)
+new_restaurant = new_rest(confirm_choice)
+new_entertainment = new_ent(confirm_choice)
+new_transportation = new_trans(confirm_choice)
 
-print(f'Your day trip is: {destination}, {restaurant}, {entertainment}, all en route by {transportation}! Have fun!')
+if new_destination == None: 
+    print(f'Your day trip is: {destination}, {restaurant}, {entertainment}, all en route by {transportation}! Have fun!')
+else: 
+    print(f'Your day trip is: {new_destination}, {new_restaurant}, {new_entertainment}, all en route by {new_transportation}! Have fun!')
