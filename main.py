@@ -23,6 +23,7 @@
 
 import random
 
+
 # LISTS of FEATURES
 
 destinations = ['New York City', 'Los Angeles', 'Houston', 'Schenectady', 'Atlanta']
@@ -37,18 +38,79 @@ transportation = random.choice(transportations)
 
 day_trip = (f'Destination: {destination}, Restaurant: {restaurant}, Entertainment: {entertainment}, Transportation: {transportation}')
 
-print (day_trip)
-confirm_choice = input(f'Does that sound like fun? Please enter YES or NO to confirm these travel options.')
+print(day_trip)
+
+confirm_choice = input(f'Does this sound like fun? Please enter YES or NO to confirm these day trip options.')
+
+# print(f' Have fun going to {destination}, dining at {restaurant}, going to {entertainment} all via {transportation}!' )
+
+def new_dest(destinations):
+    confirm_choice = ""
+    while confirm_choice != 'YES':
+        destination = random.choice(destinations)
+        confirm_choice = input(f'We have selected {destination} as another trip option. Does that work for you? ')
+        if confirm_choice == 'NO':
+            destination = random.choice(destinations)
+            confirm_choice = input(f'How about {destination}?')
+        elif confirm_choice == 'YES':
+            print(f'You selected {destination} as your trip destination! ')
+        else:
+            print('Rain check.')
+    return destination
+
+destination = new_dest(destinations)
+
+def new_rest(restaurants):
+    while confirm_choice != 'YES':   
+        restaurant = random.choice(restaurants)
+        confirm_choice = input(f'We have selected {restaurant} as another dine out option. Does that work for you? ')
+        if confirm_choice == 'NO':
+            restaurant = random.choice(restaurants)
+            confirm_choice = input(f'How about {restaurant}?')
+        elif confirm_choice == 'YES':
+            print(f'You selected {restaurant} as your dine out option! ')
+        else:
+            print('Maybe later.')
+    return restaurant
+
+restaurant = new_rest(restaurants)
+
+def new_ent(entertainments):
+    while confirm_choice != 'YES':
+        entertainment = random.choice(entertainments)
+        confirm_choice = input(f'We have selected {entertainment} as another entertainment option. Does that work for you?')
+        if confirm_choice == 'NO':
+            entertainment = random.choice(entertainments)
+            confirm_choice = input(f'How about {entertainment}?')
+        elif confirm_choice == 'YES':
+            print(f'You selected {entertainment}. Sounds fun! ')
+        else:
+            print('Oh well.')
+    return entertainment 
+
+entertainment = new_ent(entertainments)
+
+def new_trans(transportations):
+        while confirm_choice != 'YES':
+            transportation = random.choice(transportations)
+            confirm_choice = input(f'We have selected {transportation} as another transportation option. Does that work for you?')
+            if confirm_choice == 'NO':
+                transportation = random.choice(transportations)
+                confirm_choice = input(f'How about {transportation}?')
+            elif confirm_choice == 'YES':
+                print(f'You selected {transportation} as your transportation option! ')
+            else:
+                print(f'See you in the funny papers.')
+        return transportation 
+
+transportation = new_trans(transportations)
+
+print(f'Your day trip is: {destination}, {restaurant}, {entertainment}, all en route by {transportation}! Have fun!')
 
 
-if confirm_choice != 'YES':
-    destination = random.choice(destinations)
-    restaurant = random.choice(restaurants)
-    entertainment = random.choice(entertainments)
-    transportation = random.choice(transportations)
-    day_trip = (f'Destination: {destination}, Restaurant: {restaurant}, Entertainment: {entertainment}, Transportation: {transportation}')
-    confirm_choice = input(f' We have selected {destination}, {restaurant}, {entertainment}, and {transportation} as other options. Does that work for you? ')
+# destination = new_dest(destinations)
+# restaurant = new_rest(restaurants)
+# entertainment = new_ent(entertainments)
+# transportation = new_trans(transportations)
 
-print(confirm_choice + f'!  You selected {day_trip} as your trip options. Have a great time!')
-
-
+# print(f'Your day trip is: {destination}, {restaurant}, {entertainment}, all en route by {transportation}! Have fun!')
