@@ -42,8 +42,6 @@ print(day_trip)
 
 confirm_choice = input(f'Does this sound like fun? Please enter YES or NO to confirm these day trip options.')
 
-# print(f' Have fun going to {destination}, dining at {restaurant}, going to {entertainment} all via {transportation}!' )
-
 def new_dest(confirm_choice):
     while confirm_choice != 'YES':
         destination = random.choice(destinations)
@@ -86,7 +84,6 @@ def new_ent(confirm_choice):
             print('Oh well.')
 
 
-
 def new_trans(confirm_choice):
         while confirm_choice != 'YES':
             transportation = random.choice(transportations)
@@ -99,10 +96,6 @@ def new_trans(confirm_choice):
                 return transportation 
             else:
                 print(f'See you in the funny papers.')
-
-
-
-# print(f'Your day trip is: {destination}, {restaurant}, {entertainment}, all en route by {transportation}! Have fun!')
 
 
 new_destination = new_dest(confirm_choice)
